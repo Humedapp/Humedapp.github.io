@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--bootstrap y otros-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script defer src="./script.js"></script>
+    <style>
+        .navbar{
+            padding: 0;
+        }
+        .navbar .container-fluid{
+            background-color: rgba(159, 243, 174, 0.544);
+        }
+        .navbar-brand img{
+            max-height: 3.6em;
+        }
+        .espacio{
+            height: 3em;
+        }
+        .fondo-claro{
+            background-color: rgba(255,255,255,0.5);
+            color: black;
+        }
+    </style>
+
+    <title>HumedApp</title>
+</head>
+<body>
+    <!--header-->
+    <nav class="navbar navbar-expand-md bg-light sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand d-sm-none "> <img src="./logo-foto.png" alt="logo"></a>
+          <a class="navbar-brand d-none d-sm-block me-auto ms-auto"><img src="./logo-largo.png" alt="logo"> </a>
+        </div>
+    </nav>
+    <div class="espacio"></div>
+    <div class="container fondo-claro">
+        <p>HumedApp es una página web que comparte datos recolectados por 5 sondas, cada una de estas cuentan con 3 sensores de humedad de arduino DHT11 ubicados en la universidad Adolfo Ibañez sede Viña del Mar con la finalidad de conocer y analizar patrones que pudiesen influir en la humedad del sector, como también el de conocer la humedad de este mismo sector y si su riego es efectivo
+        </p>
+        <p>La escasez de agua se refiere a la falta de suficientes recursos hídricos para satisfacer las demandas de consumo de agua en una región. Es por esto que se quiso crear una plataforma que pueda entregar los datos de humedad en la tierra de algùn sector especìfico, de esta manera poder conocer si el ambiente se encuentra siendo òptimo o no para las plantas del sector, en caso de que no, que el cliente final sepa de manera sencilla si el sector está excesivamente húmedo o seco.
+        </p>
+    </div>
+    <div class="espacio"></div>
+    <div class="container text-center">
+        <p class="display-5">Sensores activos</p>
+    </div>
+    <div class="espacio"></div>
+    <div class="container" id="contSensores">
+        <div class="accordion container" id="sensor1">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    Sensor #1
+                </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#sensor1">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Muestra</th>
+                                <th scope="col">% Humedad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sen1">
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <div class="accordion container" id="sensor2">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                    Sensor #2
+                </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2" data-bs-parent="#sensor2">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Hora</th>
+                                    <th scope="col">Muestra</th>
+                                    <th scope="col">% Humedad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sen2">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <div class="accordion container" id="sensor3">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                    Sensor #3
+                </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse show" aria-labelledby="heading3" data-bs-parent="#sensor3">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Hora</th>
+                                    <th scope="col">Dato</th>
+                                    <th scope="col">% Humedad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sen3">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+      
+    <div class="espacio"></div>
+</body>
+</html>
